@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BankOne</string>
+    <string name="splash_icon_desc">BankingOneApp Splash Screen Icon</string>
+    <string name="forgot_password_text"><u>Forgot Password?</u></string>
+</resources>
