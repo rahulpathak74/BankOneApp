@@ -16,7 +16,7 @@
     </style>
 
     <style name="splashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:statusBarColor"> @color/transparent </item>
+        <item name="android:statusBarColor">@color/transparent</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowIsTranslucent">false</item>
         <item name="statusBarBackground">@color/transparent</item>
@@ -30,4 +30,13 @@
         <item name="android:windowSoftInputMode">stateHidden|adjustResize</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
+
+    <style name="splashScreenTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="splashScreenTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="splashScreenTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

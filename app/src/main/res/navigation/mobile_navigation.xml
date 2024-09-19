@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.bankingoneapp.ui.main.view.fragments.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.bankingoneapp.ui.main.view.fragments.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_deals"
+        android:name="com.example.bankingoneapp.ui.main.view.fragments.deals.DealsFragment"
+        android:label="Deals"
+        tools:layout="@layout/fragment_deals" />
+
+    <fragment
+        android:id="@+id/navigation_contest"
+        android:name="com.example.bankingoneapp.ui.main.view.fragments.contest.ContestFragment"
+        android:label="Contest"
+        tools:layout="@layout/fragment_contest" />
+    <fragment
+        android:id="@+id/navigation_loyality"
+        android:name="com.example.bankingoneapp.ui.main.view.fragments.loyality.LoyalityFragment"
+        android:label="Loyality"
+        tools:layout="@layout/fragment_loyality" />
+</navigation>
