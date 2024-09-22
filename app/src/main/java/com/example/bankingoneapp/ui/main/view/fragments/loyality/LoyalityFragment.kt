@@ -27,10 +27,6 @@ private var _binding: FragmentLoyalityBinding? = null
     _binding = FragmentLoyalityBinding.inflate(inflater, container, false)
     val root: View = binding.root
 
-    val textView: TextView = binding.textNotifications
-    loyalityViewModel.text.observe(viewLifecycleOwner) {
-      textView.text = it
-    }
     return root
   }
 

@@ -26,11 +26,6 @@ class ContestFragment : Fragment() {
 
         _binding = FragmentContestBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textDashboard
-        dealsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 

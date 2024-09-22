@@ -3,9 +3,8 @@ package com.example.bankingoneapp.ui.main.view.fragments
 import android.app.KeyguardManager
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
-import android.content.DialogInterface
+import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.os.CancellationSignal
@@ -14,15 +13,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.bankingoneapp.R
 import com.example.bankingoneapp.databinding.FragmentLoginBinding
+import com.example.bankingoneapp.ui.main.view.activities.BottomNavigationViewActivity
 
 
 class LoginFragment : Fragment() {
@@ -43,10 +40,13 @@ class LoginFragment : Fragment() {
                 super.onAuthenticationSucceeded(result)
                 notifyUser("Authentication Succeeded")
 
-                // or start a new Activity
-
+                val intent = Intent(
+                    activity,
+                    BottomNavigationViewActivity::class.java
+                )
+                startActivity(intent)
+                activity?.finish()
             }
-
         }
 
 
@@ -85,7 +85,12 @@ class LoginFragment : Fragment() {
                         activity?.getSharedPreferences("MySharedPref", MODE_PRIVATE)
                     sharedPreferences?.edit()?.putBoolean("isLoggedIn", true)?.apply()
 
-                    // Move to Home Page
+                    val intent = Intent(
+                        activity,
+                        BottomNavigationViewActivity::class.java
+                    )
+                    startActivity(intent)
+                    activity?.finish()
                 } else {
                     Toast.makeText(
                         this.context,
