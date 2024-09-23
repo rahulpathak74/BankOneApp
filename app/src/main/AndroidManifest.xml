@@ -14,10 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/splashScreenTheme"
         tools:targetApi="31" >
-        <activity
-            android:name=".BottomNavigation"
-            android:exported="false"
-            android:label="@string/title_activity_bottom_navigation" />
 
         <activity
             android:name=".ui.main.view.activities.BottomNavigationViewActivity"
@@ -25,6 +21,11 @@
             android:label="@string/title_activity_bottom_navigation_view"
             android:theme="@style/splashScreenTheme" >
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -35,11 +36,6 @@
             android:theme="@style/splashScreenTheme"
             android:windowSoftInputMode="adjustNothing|stateHidden" >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
