@@ -21,20 +21,22 @@
             android:label="@string/title_activity_bottom_navigation_view"
             android:theme="@style/splashScreenTheme" >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".ui.main.view.activities.MainActivity"
             android:exported="true"
             android:theme="@style/splashScreenTheme"
             android:windowSoftInputMode="adjustNothing|stateHidden" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
     </application>
